@@ -90,11 +90,11 @@ use 0 for the bus not 1)::
     00:          -- -- -- -- -- -- -- -- -- -- -- -- --
     10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-    30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+    30: -- -- -- -- -- -- -- -- -- 39 -- -- -- -- -- --
     40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-    70: -- -- -- -- -- -- 76 --
+    70: -- -- -- -- -- -- -- --
 
 Installing the Python Package
 -----------------------------
@@ -118,7 +118,7 @@ Alternatively, a version on PyPi is available, just do::
 Software Driver - Example Usage
 -------------------------------
 Once installed, confirm the I2C address (see prerequisites, it will most 
-likely be 0x76 or 0x77) and port.
+likely be 0x39) and port.
 
 Then in a python script or REPL:
 
@@ -129,7 +129,7 @@ Then in a python script or REPL:
   import apds9960
 
   port = 1
-  address = ???
+  address = 0x39
   bus = smbus2.SMBus(port)
 
 References
